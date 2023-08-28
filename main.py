@@ -23,6 +23,7 @@ import traceback
 def main():
     #intro
     try:
+        open('jokes.txt', 'a').close()
         if "--debug" in sys.argv:
             logging.basicConfig(level=logging.DEBUG)
         input("Welcome to the Yo Momma joke creator, powered by ChatGPT.")
@@ -70,9 +71,17 @@ def reader():
     print("Help to rate ChatGPT jokes, but please go easy on in since it\nis not a professional comedian.")
     print("When presented a joke first say whether it makes semantical sense,\nor if the butt of the joke makes sense given the setup.")
     print("You can keep going until you exit, or have selected all of the jokes in the pool.")
+    #open('jokes.txt', 'a').close()
     with open('jokes.txt','r') as file:
         json_string = file.read()
-    json_unrated_jokes = json.loads(json_string)
+        
+
+        if json_string:
+            json_unrated_jokes = json.loads(json_string)
+        else:
+            json_unrated_jokes = []
+
+    #json_unrated_jokes = json.loads(json_string)
     json_rated_jokes = []
     answer =  input("Do you want another joke? yes/no ")
     while(answer == 'yes'):
@@ -109,6 +118,7 @@ def reader():
         answer =  input("Do you want another joke? yes/no ")
     #combine the two lists and write to file, with unrated jokes first    
     combined_list = json_unrated_jokes + json_rated_jokes
+    #open('jokes.txt', 'a').close()
     with open("jokes.txt", "w") as file:
         json.dump(combined_list,file, indent=4)
     #return to main menu
@@ -129,7 +139,7 @@ def creator():
         
     
     #burner api key
-    burner_api_key = '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'
+    burner_api_key = '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'
     #set api key
     openai.api_key = burner_api_key
     #generate joke list
@@ -199,12 +209,20 @@ def creator():
         generated_jokes.append(new_joke_json)
         make_another_joke = input('Generate another joke? yes/no ')
     print('Saving changes...')
+
     #overwrite jokes.txt with appended new jokes
+    #open('jokes.txt', 'a').close()
     with open('jokes.txt','r') as file:
         json_string = file.read()
-    json_stored_jokes = json.loads(json_string)
+
+        if json_string:
+            json_stored_jokes = json.loads(json_string)
+        else:
+            json_stored_jokes = []
+    #json_stored_jokes = json.loads(json_string)
     combined_list = generated_jokes + json_stored_jokes
 
+    
     with open("jokes.txt", "w") as file:
         json.dump(combined_list,file, indent=4)
     input('Changes saved!')
