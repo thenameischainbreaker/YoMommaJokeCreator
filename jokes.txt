@@ -1,0 +1,86 @@
+[
+    {
+        "id": "af4de6fd4678d60f4629d1f364cd215f",
+        "text": "Yo restaurant so cheap, when I asked for sweet and sour chicken, they gave me a lollipop and a lemon.",
+        "rating": null,
+        "subject": "Chinese restauarant"
+    },
+    {
+        "id": "de1cb47522c12d7311157d622328431f",
+        "text": "Yo momma so dumb, she saw a zebra at the zoo and asked if it was in black and white because it ain't paid its color bill!",
+        "rating": null,
+        "subject": "zebra"
+    },
+    {
+        "id": "f9b9f44448d70bf791a73e28dd1f6fb3",
+        "text": "Yo momma's so addicted to McDonald's, she thinks Ronald McDonald is her baby daddy!",
+        "rating": null,
+        "subject": "McDonald's"
+    },
+    {
+        "id": "09c6577852b5cd5fada644fab34341f3",
+        "text": "Yo momma's so doggone hairy, when she takes her dog for a walk, people mistake her for the dog!",
+        "rating": null,
+        "subject": "doggy"
+    },
+    {
+        "id": "130465b2904c2fb328f2673a065ba93c",
+        "text": "Yo momma's so round and juicy, farmers pick her every fall and sell her as the world's largest apple!",
+        "rating": null,
+        "subject": "apple"
+    },
+    {
+        "id": "807cf6dd3b8acc6aa504f973ca3942ff",
+        "text": "Yo momma's so tough, she can crack a coconut with her bare hands and drink the milk in one gulp!",
+        "rating": null,
+        "subject": "coconut"
+    },
+    {
+        "id": "251b23b49d8dd244ca4bf9445498fbfd",
+        "text": "Yo momma's so scary, she doesn't need a costume on Halloween!",
+        "rating": null,
+        "subject": "scary"
+    },
+    {
+        "id": "89edcc799fd9df560c419ba460f05b0a",
+        "text": "Yo momma's so hairy, when she went to the zoo, the gorillas thought she was their cousin!",
+        "rating": null,
+        "subject": "hairy"
+    },
+    {
+        "id": "d787a5672dceb617a0a8e19f6fbc3a49",
+        "text": "Yo momma's so skinny, when she eats a pack of ramen noodles, she disappears!",
+        "rating": null,
+        "subject": "ramen noodle"
+    },
+    {
+        "id": "289884fabbfc685f6c77694e72e79810",
+        "text": "Yo momma's so slimy, she could give a jellyfish lessons!",
+        "rating": 1,
+        "subject": "jellyfish"
+    },
+    {
+        "id": "cf2d6f834d02dadff0124bb64bb312a1",
+        "text": "Yo momma's so sneaky, even the rats look up to her as their role model!",
+        "rating": 1,
+        "subject": "rat"
+    },
+    {
+        "id": "2a3d28b03320237f0f08e5ff0f092923",
+        "text": "Yo momma's back is so hairy, she has to wear a sweater backwards just to keep warm!",
+        "rating": 1,
+        "subject": "back"
+    },
+    {
+        "id": "bc90a6c0faac72c3b9d4eb83154d982a",
+        "text": "Yo momma's got so many pimples, her face looks like a dot-to-dot puzzle!",
+        "rating": 2,
+        "subject": "pimple"
+    },
+    {
+        "id": "5770ae9c5f89a5944a879b400f9de63d",
+        "text": "Yo momma so slow, even Burger King told her she couldn't have it her way.",
+        "rating": 1,
+        "subject": "burger king"
+    }
+]
