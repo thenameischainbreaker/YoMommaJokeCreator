@@ -1,8 +1,14 @@
 [
     {
+        "id": "6487f22c4b1541f0a7efe62e3a7de0b1",
+        "text": "Yo momma so cheap, she squeeze a ketchup packet and call it dinner.",
+        "rating": null,
+        "subject": "ketchup packet"
+    },
+    {
         "id": "a27c5cbe46e820b2915c023053def88a",
         "text": "Yo Momma so hairy, when she went to the haunted house, they offered her a job on the spot! They said they ain't never seen something so scary without needing a costume!",
-        "rating": null,
+        "rating": 3,
         "subject": "hairy and scary"
     }
 ]

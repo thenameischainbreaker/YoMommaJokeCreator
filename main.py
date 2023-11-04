@@ -19,6 +19,7 @@ import openai
 import logging
 import sys
 import traceback
+from urllib.request import urlopen
 
 def main():
     #intro
@@ -71,17 +72,10 @@ def reader():
     print("Help to rate ChatGPT jokes, but please go easy on in since it\nis not a professional comedian.")
     print("When presented a joke first say whether it makes semantical sense,\nor if the butt of the joke makes sense given the setup.")
     print("You can keep going until you exit, or have selected all of the jokes in the pool.")
-    #open('jokes.txt', 'a').close()
+    open('jokes.txt', 'a').close()
     with open('jokes.txt','r') as file:
         json_string = file.read()
-        
-
-        if json_string:
-            json_unrated_jokes = json.loads(json_string)
-        else:
-            json_unrated_jokes = []
-
-    #json_unrated_jokes = json.loads(json_string)
+    json_unrated_jokes = json.loads(json_string)
     json_rated_jokes = []
     answer =  input("Do you want another joke? yes/no ")
     while(answer == 'yes'):
@@ -118,7 +112,7 @@ def reader():
         answer =  input("Do you want another joke? yes/no ")
     #combine the two lists and write to file, with unrated jokes first    
     combined_list = json_unrated_jokes + json_rated_jokes
-    #open('jokes.txt', 'a').close()
+    open('jokes.txt', 'a').close()
     with open("jokes.txt", "w") as file:
         json.dump(combined_list,file, indent=4)
     #return to main menu
@@ -137,9 +131,23 @@ def creator():
         logging.critical('Error importing openai package. Try installing openai module using\npip install package-name to use this feature.')
         return
         
-    
+
+    # URL of the JSON file
+    url = "https://yo-momma-joker-open-ai.s3.us-east-2.amazonaws.com/YoMommaJokerOpenAI.json"
+
+# Open the URL and read the data
+    with urlopen(url) as response:
+        source = response.read()
+
+# Decode the JSON data and convert into Python data structure
+    data = json.loads(source)
+
+# Access the apiKey value
+    burner_api_key = data.get("apiKey", None)
+    # Check if the key exists
+
     #burner api key
-    burner_api_key = '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'
+    
     #set api key
     openai.api_key = burner_api_key
     #generate joke list
@@ -211,7 +219,7 @@ def creator():
     print('Saving changes...')
 
     #overwrite jokes.txt with appended new jokes
-    #open('jokes.txt', 'a').close()
+    open('jokes.txt', 'a').close()
     with open('jokes.txt','r') as file:
         json_string = file.read()
 
@@ -219,7 +227,7 @@ def creator():
             json_stored_jokes = json.loads(json_string)
         else:
             json_stored_jokes = []
-    #json_stored_jokes = json.loads(json_string)
+    json_stored_jokes = json.loads(json_string)
     combined_list = generated_jokes + json_stored_jokes
 
     
